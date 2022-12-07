@@ -14,12 +14,7 @@ if status is-interactive
         set -gx PAGER 'bat --plain'
     end
 
-    if type -q delta
-        abbr -a d 'delta'
-    end
-
     if type -q exa
-        abbr -a e 'exa -lagh --group-directories-first'
         abbr -a t 'exa -TL 2'
     end
 
@@ -28,9 +23,17 @@ if status is-interactive
     end
 
     if type -q fzf
+        set -gx FZF_DEFAULT_OPTS \
+            '--multi' \
+            '--cycle' \
+            '--pointer=→' \
+            '--marker=*'
+
         if type -q bat
-            set -gx FZF_DEFAULT_OPTS '--preview="bat --plain {}"'
+            set -gx FZF_DEFAULT_OPTS \
+                "$FZF_DEFAULT_OPTS --preview='bat --plain {}'"
         end
+
         if type -q fd
             set -gx FZF_DEFAULT_COMMAND 'fd --hidden --no-ignore-vcs'
         end
@@ -62,6 +65,7 @@ if status is-interactive
 
     if type -q podman
         abbr -a p 'podman'
+        abbr -a pco 'podman commit'
     end
 
     if type -q rg
