@@ -1,3 +1,5 @@
 --color=always
 --hidden
 --ignore-vcs
+--trim
+--vimgrep
