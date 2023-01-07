@@ -27,7 +27,8 @@ if status is-interactive
             '--multi' \
             '--cycle' \
             '--pointer=→' \
-            '--marker=*'
+            '--marker=→' \
+            '--tabstop=4'
 
         if type -q bat
             set -gx FZF_DEFAULT_OPTS \

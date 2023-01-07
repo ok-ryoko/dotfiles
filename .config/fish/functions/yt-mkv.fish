@@ -12,7 +12,7 @@ function yt-mkv
             --embed-thumbnail \
             $argv
     else
-        printf '%s\n' 'yt-mkv: error: yt-dlp not found'
+        printf '%s\n' 'yt-mkv: error: yt-dlp not found' >&2
         return 1
     end
 end
