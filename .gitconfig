@@ -1,0 +1,48 @@
+[core]
+	editor = nvim
+	pager = delta
+
+[alias]
+	a = add
+	c = commit
+	d = diff
+	l = log --abbrev-commit --graph --max-count=16 --pretty=oneline
+	r = restore
+	s = status --branch --short
+	t = tag
+
+[credential]
+	helper = !/usr/bin/gh auth git-credential
+
+[delta]
+	dark = true
+	line-numbers = true
+	navigate = true
+	side-by-side = false
+	true-color = always
+
+[diff]
+	algorithm = histogram
+	colorMoved = zebra
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+[init]
+	defaultBranch = main
+
+[interactive]
+	diffFilter = delta --color-only
+
+[merge]
+	conflictstyle = diff3
+
+[pull]
+	rebase = true
+
+[user]
+	name = OK Ryoko
+	email = ryoko@kyomu.jp.net
