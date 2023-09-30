@@ -1,0 +1,3 @@
+if [ -t 1 ] && command -v buildah > '/dev/null'; then
+	alias bd='buildah'
+fi

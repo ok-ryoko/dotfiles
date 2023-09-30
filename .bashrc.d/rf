@@ -1,0 +1,3 @@
+rf() {
+	rg --color='ansi' $@ | fzf --ansi --preview=''
+}
