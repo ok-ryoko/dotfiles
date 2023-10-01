@@ -1,0 +1,19 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[{**.{ac,am,awk,bat,Containerfile,Dockerfile,gitconfig,go,mk,sh,stp,stpm},.bashrc.d/**,.bash_login,.bash_profile,.bashrc,.profile,Containerfile,Dockerfile,Makefile}]
+indent_style = tab
+indent_size = 4
+
+[{**.{asm,C,c,c++,cc,cmake,cpp,cxx,h,hpp,hxx,ps1,py,rs,S,s,vim,zig,zon},CMakeLists.txt}]
+indent_style = space
+indent_size = 4
+
+[{**.{adoc,css,gv,htm,html,js,json,jsx,justfile,lua,md,nix,r,rkt,rst,scm,scss,svg,tex,toml,ts,tsx,xml,yaml,yml},justfile}]
+indent_style = space
+indent_size = 2
