@@ -6,14 +6,54 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[{**.{ac,am,awk,bat,Containerfile,Dockerfile,gitconfig,go,mk,sh,stp,stpm},.bashrc.d/**,.bash_login,.bash_profile,.bashrc,.profile,Containerfile,Dockerfile,Makefile}]
+[**.{S,asm,s}]
+indent_style = tab
+indent_size = 8
+
+[{**.{awk,bash**,bat,go,sh,stp,stpm},.profile}]
 indent_style = tab
 indent_size = 4
 
-[{**.{asm,C,c,c++,cc,cmake,cpp,cxx,h,hpp,hxx,ps1,py,rs,S,s,vim,zig,zon},CMakeLists.txt}]
+[{**.{ac,am,mk},GNUmakefile,Makefile,makefile}]
+indent_style = tab
+indent_size = 4
+
+[{**.{Containerfile,Dockerfile},Containerfile,Dockerfile}]
+indent_style = tab
+indent_size = 4
+
+[{.gitconfig,.config/git/config,.git/config}]
+indent_style = tab
+indent_size = 4
+
+[**.{C,c,c++,cc,cpp,cxx,h,h++,hh,hpp,hxx}]
 indent_style = space
 indent_size = 4
 
-[{**.{adoc,css,gv,htm,html,js,json,jsx,justfile,lua,md,nix,r,rkt,rst,scm,scss,svg,tex,toml,ts,tsx,xml,yaml,yml},justfile}]
+[**.{ps1,py,rs,sql,tcl,vim,zig,zon}]
+indent_style = space
+indent_size = 4
+
+[**.{f,f77,f90,f95,f03,f08,f18,f23,for}]
+indent_style = space
+indent_size = 4
+
+[**.{ex,exs,fnl,ll,lua,nix,r,rkt,scm}]
+indent_style = space
+indent_size = 2
+
+[**.{cjs,cts,js,json,jsx,mjs,mts,ts,tsx}]
+indent_style = space
+indent_size = 2
+
+[**.{css,htm,html,scss,svg,xml}]
+indent_style = space
+indent_size = 2
+
+[**.{toml,yaml,yml}]
+indent_style = space
+indent_size = 2
+
+[**.{adoc,md,rst,tex,typ}]
 indent_style = space
 indent_size = 2

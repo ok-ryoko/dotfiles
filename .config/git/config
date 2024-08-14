@@ -15,11 +15,38 @@
 	helper = !/usr/bin/gh auth git-credential
 
 [delta]
-	dark = true
 	line-numbers = true
 	navigate = true
 	side-by-side = false
 	true-color = always
+	features = blue-screen
+
+[delta "blue-screen"]
+	blame-palette = "#00014c" "#232440" "#3b3c53"
+	blame-separator-format = {n:>6}
+	blame-separator-style = "#6e6f81"
+	dark = true
+	file-style = omit
+	hunk-header-decoration-style = ul "#00014c"
+	hunk-header-file-style = italic
+	hunk-header-line-number-style = "#6e6f81"
+	hunk-header-style = file line-number syntax
+	line-numbers-left-format = {nm:^4}
+	line-numbers-left-style = "#6e6f81"
+	line-numbers-minus-style = "#6dcfff" "#232440"
+	line-numbers-plus-style = "#f0bf50" "#232440"
+	line-numbers-right-format = │{np:^4}
+	line-numbers-right-style = "#6e6f81"
+	line-numbers-zero-style = "#6e6f81"
+	merge-conflict-begin-symbol = <
+	merge-conflict-end-symbol = >
+	merge-conflict-ours-diff-header-decoration-style = ul "#6e6f81"
+	merge-conflict-theirs-diff-header-decoration-style = ul "#6e6f81"
+	minus-emph-style = "#00014c" "#6dcfff"
+	minus-style = "#6dcfff" "#232440"
+	plus-emph-style = "#00014c" "#f0bf50"
+	plus-style = "#f0bf50" "#232440"
+	syntax-theme = none
 
 [diff]
 	algorithm = histogram
