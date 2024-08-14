@@ -7,5 +7,5 @@ yt-mkv() {
 		--embed-metadata \
 		--embed-subs \
 		--embed-thumbnail \
-		$@
+		"$@"
 }

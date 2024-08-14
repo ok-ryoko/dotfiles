@@ -1,8 +1,4 @@
-export LESS='-FR'
-export LESSHISTSIZE=0
-
-if [ -t 1 ]; then
-	if command -v fzf > '/dev/null'; then
-		export FZF_DEFAULT_OPTS='--cycle --multi --tabstop=4'
-	fi
-fi
+export HISTCONTROL=ignoreboth
+export LESS=-FR
+export LESSHISTFILE=/dev/null
+export LESSSECURE=1
